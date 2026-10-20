@@ -1,6 +1,5 @@
 const fs = require('fs');
 const https = require('https');
-const { execSync } = require('child_process');
 
 function get(url) {
   return new Promise((resolve, reject) => {
@@ -17,10 +16,9 @@ function get(url) {
 }
 
 (async () => {
-  // Last known good full server with hydrateStore
-  const url = 'https://raw.githubusercontent.com/codem548/funbet-casino/160efb6c17c2dea92cfd339d130399e19d9465f6/server.ts';
+  const url =
+    'https://raw.githubusercontent.com/codem548/funbet-casino/160efb6c17c2dea92cfd339d130399e19d9465f6/server.ts';
   let src = await get(url);
-  // Inject partner import if missing
   if (!src.includes('partner-routes')) {
     src = src.replace(
       "from './server/db/store';",
@@ -30,10 +28,9 @@ function get(url) {
   if (!src.includes('registerPartnerRoutes(app')) {
     src = src.replace(
       'function saveRiskSettings() { writeData(RISK_SETTINGS_FILE, riskSettings); }',
-      `function saveRiskSettings() { writeData(RISK_SETTINGS_FILE, riskSettings); }\n\nregisterPartnerRoutes(app, {\n  players,\n  savePlayers,\n  jwtSecret: JWT_SECRET,\n  hashPassword,\n  stripPassword: stripPassword as any,\n});`.replace(' as any', '')
+      'function saveRiskSettings() { writeData(RISK_SETTINGS_FILE, riskSettings); }\n\nregisterPartnerRoutes(app, {\n  players,\n  savePlayers,\n  jwtSecret: JWT_SECRET,\n  hashPassword,\n  stripPassword,\n});'
     );
   }
-  // referralCode on register
   if (!src.includes('referralCode')) {
     src = src.replace(
       'const { username, email, phone, password } = req.body;',
@@ -41,20 +38,29 @@ function get(url) {
     );
     src = src.replace(
       'const hashed = await hashPassword(password);\n    const player: Player = {',
-      `let referredBy: string | undefined;\n    if (referralCode && String(referralCode).trim()) {\n      const code = String(referralCode).trim().toUpperCase();\n      const partner = players.find(p => p.isPartner && (p.partnerCode === code || (p as any).referralCode === code));\n      if (partner) referredBy = partner.id;\n    }\n    const hashed = await hashPassword(password);\n    const player: Player = {`
+      "let referredBy: string | undefined;\n    if (referralCode && String(referralCode).trim()) {\n      const code = String(referralCode).trim().toUpperCase();\n      const partner = players.find(p => p.isPartner && (p.partnerCode === code || (p as any).referralCode === code));\n      if (partner) referredBy = partner.id;\n    }\n    const hashed = await hashPassword(password);\n    const player: Player = {"
     );
     src = src.replace(
-      'lastDailyClaim: null,\n    };',
-      'lastDailyClaim: null,\n      referredBy,\n      isPartner: false,\n      partnerBalance: 0,\n      totalReferralEarnings: 0,\n      commissionRate: 0.2,\n    };'
+      "isAdmin: username.trim().toLowerCase() === 'admin',\n      lastDailyClaim: null,\n    };",
+      "isAdmin: username.trim().toLowerCase() === 'admin',\n      lastDailyClaim: null,\n      referredBy,\n      isPartner: false,\n      partnerBalance: 0,\n      totalReferralEarnings: 0,\n      commissionRate: 0.2,\n    };"
     );
   }
-  // commission helper injection on savePlayers
-  if (!src.includes('creditPartnerCommission')) {
+  if (!src.includes('creditPartnerCommission(players')) {
     src = src.replace(
       'function savePlayers() { writeData(PLAYERS_FILE, players); }',
-      `let __lastCommissionLogId: string | null = null;\nfunction savePlayers() {\n  const last = logs[0];\n  if (last && last.id !== __lastCommissionLogId && last.mode === 'REAL') {\n    __lastCommissionLogId = last.id;\n    const pl = players.find(p => p.username === last.username);\n    if (pl) creditPartnerCommission(players, pl, last.bet, last.payout || 0, last.mode);\n  }\n  writeData(PLAYERS_FILE, players);\n}`
+      "let __lastCommissionLogId = null;\nfunction savePlayers() {\n  const last = typeof logs !== 'undefined' && logs && logs[0];\n  if (last && last.id !== __lastCommissionLogId && last.mode === 'REAL') {\n    __lastCommissionLogId = last.id;\n    const pl = players.find(p => p.username === last.username);\n    if (pl) creditPartnerCommission(players, pl, last.bet, last.payout || 0, last.mode);\n  }\n  writeData(PLAYERS_FILE, players);\n}"
+    );
+  }
+  // in-place hydrate for partner routes closure
+  if (!src.includes('players.splice(0, players.length')) {
+    src = src.replace(
+      "players = await hydrateStore('players', players);",
+      "const hPlayers = await hydrateStore('players', players);\n      players.splice(0, players.length, ...hPlayers);"
     );
   }
   fs.writeFileSync('server.ts', src);
   console.log('restored+patched server.ts', fs.statSync('server.ts').size);
-})().catch((e) => { console.error(e); process.exit(1); });
+})().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
