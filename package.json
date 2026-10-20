@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "prebuild": "node -e \"const fs=require('fs');const p='server/parts';if(fs.existsSync(p)){const files=fs.readdirSync(p).filter(f=>/^part\\d+\\.txt$/.test(f)).sort();fs.writeFileSync('server.ts',files.map(f=>fs.readFileSync(p+'/'+f,'utf8')).join(''));console.log('assembled server.ts from',files.length,'parts')}\"",
+    "prebuild": "node -e \"const fs=require('fs');const z=require('zlib');const b=fs.readFileSync('server.ts.gz.b64','utf8');fs.writeFileSync('server.ts',z.gunzipSync(Buffer.from(b,'base64')));console.log('restored server.ts',fs.statSync('server.ts').size)\"",
     "build": "npm run prebuild && vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "vercel-build": "npm run build",
     "start": "node dist/server.cjs",
