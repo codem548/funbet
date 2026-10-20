@@ -1,0 +1,1 @@
+const fs=require('fs');const z=require('zlib');const d='server.ts.gz.b64.d';const b=fs.readdirSync(d).filter(f=>f.endsWith('.txt')).sort().map(f=>fs.readFileSync(d+'/'+f,'utf8')).join('');fs.writeFileSync('server.ts',z.gunzipSync(Buffer.from(b,'base64')));console.log('restored server.ts',fs.statSync('server.ts').size);
