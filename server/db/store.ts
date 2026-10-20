@@ -50,7 +50,9 @@ export function getPool(): pg.Pool {
     max: 5,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 15_000,
-  });
+    // Prefer IPv4 — Railway cannot always reach Supabase IPv6
+    family: 4,
+  } as any);
   pool.on('error', (err) => {
     console.error('[db] pool error', err.message);
   });
@@ -99,7 +101,6 @@ export async function hydrateStore<T>(
   try {
     const fromDb = await loadKey<T>(key);
     if (fromDb === null || fromDb === undefined) {
-      // seed initial value
       await saveKey(key, defaultValue);
       return defaultValue;
     }
@@ -119,7 +120,6 @@ export async function initDatabase(): Promise<boolean> {
   try {
     const p = getPool();
     await p.query('SELECT 1');
-    // Ensure table exists (idempotent)
     await p.query(`
       CREATE TABLE IF NOT EXISTS app_store (
         key TEXT PRIMARY KEY,
