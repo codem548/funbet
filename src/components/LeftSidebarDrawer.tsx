@@ -205,7 +205,7 @@ export default function LeftSidebarDrawer({
             </button>
 
             <a
-              href="https://wa.me/237600000000"
+              href="https://wa.me/"
               target="_blank"
               rel="noreferrer"
               className="w-full px-3 py-2 hover:bg-[#222629] text-zinc-300 hover:text-emerald-400 rounded-xl text-xs font-medium flex items-center gap-2 transition-colors cursor-pointer"
@@ -257,7 +257,7 @@ export default function LeftSidebarDrawer({
             <span>Déconnexion</span>
           </button>
           <p className="text-[9px] text-zinc-500 text-center font-mono">
-            Licence MINAT Cameroun • 18+ Uniquement
+             • 18+ Uniquement
           </p>
         </div>
 

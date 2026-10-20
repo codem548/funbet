@@ -114,7 +114,7 @@ export default function CasinoLobby({
       <section className="space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-sm sm:text-base font-extrabold text-white">🇨🇲 Les plus populaires au Cameroun</span>
+            <span className="text-sm sm:text-base font-extrabold text-white">Les plus populaires</span>
             <span className="px-2 py-0.5 bg-[#222629] text-zinc-400 border border-[#2e3438] rounded-full text-[10px] font-mono">
               4 Jeux Pro
             </span>

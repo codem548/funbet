@@ -289,7 +289,7 @@ export default function DepositWithdrawModal({
             <div className="space-y-4">
               <div className="p-3 rounded-xl bg-[#222629] border border-white/5 text-[11px] text-zinc-400 leading-relaxed">
                 Transférez le montant vers le compte affiché, puis déclarez votre dépôt avec la référence reçue.
-                Le solde est crédité <span className="text-white font-semibold">uniquement après validation</span> par l&apos;administration (statut : en attente).
+                {/* Le solde est crédité <span className="text-white font-semibold">uniquement après validation</span> par l&apos;administration (statut : en attente). */}
               </div>
 
               <div>
@@ -423,13 +423,13 @@ export default function DepositWithdrawModal({
           {modalTab === 'withdraw' && (
             <form onSubmit={handleWithdrawSubmit} className="space-y-3.5">
               <div className="bg-[#222629] p-3.5 rounded-2xl border border-white/5 flex items-center justify-between font-mono text-xs">
-                <span className="text-zinc-400">Solde Réel Retirable :</span>
+                <span className="text-zinc-400">Solde Disponible :</span>
                 <span className="font-black text-[#9ce800] text-sm">{(player.solde || 0).toLocaleString()} FCFA</span>
               </div>
 
               <div className="p-3 bg-emerald-950/30 border border-emerald-500/20 rounded-xl flex items-center gap-2 text-[11px] text-emerald-300">
                 <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Les retraits sont traités après validation par l'administration. Le montant est réservé dès la demande.</span>
+                <span>Les retraits sont traités dans les 48 heures.</span>
               </div>
 
               <div>

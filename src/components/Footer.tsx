@@ -86,13 +86,13 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center justify-center gap-4 flex-wrap pt-1">
-            <div className="px-4 py-2 bg-[#222629] border border-[#2e3438] rounded-xl flex items-center gap-2">
-              <span className="text-xl">🇨🇲</span>
+            {/* <div className="px-4 py-2 bg-[#222629] border border-[#2e3438] rounded-xl flex items-center gap-2"> */}
+              <span className="text-xl">FB</span>
               <div className="text-left font-mono">
-                <div className="text-xs font-extrabold text-white">Ligue Camerounaise de Football</div>
-                <div className="text-[10px] text-zinc-500">Championnat National Elite One & Two</div>
+                <div className="text-xs font-extrabold text-white">FunBet Ligue de Jeux</div>
+                <div className="text-[10px] text-zinc-500">Elite One & Two</div>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
 
@@ -140,7 +140,7 @@ export default function Footer() {
               <li><span className="hover:text-white transition-colors cursor-pointer">Règles officielles</span></li>
               <li><span className="hover:text-white transition-colors cursor-pointer">Politique de confidentialité</span></li>
               <li><span className="hover:text-white transition-colors cursor-pointer">Jeu Responsable (+18)</span></li>
-              <li><span className="hover:text-white transition-colors cursor-pointer">Licence MINAT Cameroun</span></li>
+              <li><span className="hover:text-white transition-colors cursor-pointer"></span></li>
               <li><span className="hover:text-white transition-colors cursor-pointer">Conditions générales</span></li>
             </ul>
           </div>
@@ -188,10 +188,10 @@ export default function Footer() {
         {/* 5. Legal MINAT Text and Warning */}
         <div className="bg-[#222629] p-4 rounded-2xl border border-[#2e3438] space-y-2 text-[11px] text-zinc-400 leading-relaxed font-sans">
           <p>
-            Vos paris et paiements sont traités par <strong>Ennovative Gaming Sarl</strong>, société agréée et régulée par le Ministère de l'Administration Territoriale du Cameroun (MINAT).
+            Vos paris et paiements sont traités par <strong>omna Gaming Sarl</strong>
           </p>
           <p className="font-mono text-[10px] text-zinc-500">
-            Licence n° <strong>000975/A/MINAT/SG/DAP/SDLP/SJ/</strong> • Autorisation d'exploitation de jeux et paris en ligne.
+            n° <strong>000975/A/SG/DAP/SDLP/SJ/</strong> • Jeux et paris en ligne.
           </p>
           <p className="text-red-400 font-medium pt-1">
             🔞 Vous devez être âgé d’au moins 21 ans pour parier. Les jeux d'argent comportent des risques d'addiction et d'isolement. Jouez de manière responsable.

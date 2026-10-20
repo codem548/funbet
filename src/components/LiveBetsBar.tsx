@@ -14,7 +14,7 @@ const INITIAL_BETS: LiveBetEvent[] = [
   { id: '5', username: 'Paul_B', gameId: 'crash', gameName: 'Rocket Crash', bet: 500, multiplier: 2.30, payout: 1150, isBigWin: false, timestamp: 'Il y a 48s' },
 ];
 
-const RANDOM_USERS = ['Ibrahim_C', 'Fatou_D', 'Yannick_K', 'Saliou_M', 'Ebenezer_T', 'Nathalie_G', 'Bakary_S', 'Junior_237', 'Ousmane_SN'];
+const RANDOM_USERS = ['Ibrahim_C', 'Fatou_D', 'Yannick_K', 'Saliou_M', 'Ebenezer_T', 'Nathalie_G', 'Bakary_S', 'ali', 'Ousmane_SN'];
 const GAMES = [
   { id: 'crash', name: 'Rocket Crash', maxM: 25 },
   { id: 'mines', name: 'Démineur Pro', maxM: 8 },

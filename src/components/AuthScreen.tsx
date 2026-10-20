@@ -277,7 +277,7 @@ export default function AuthScreen({ onLoginSuccess }: AuthScreenProps) {
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    placeholder="Ex: player1, junior, admin..."
+                    placeholder="Ex: player"
                     className="w-full pl-10 pr-4 py-2.5 bg-[#171a1c] border border-[#2e3438] rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#9ce800] text-sm transition-all"
                     required
                   />
@@ -517,7 +517,7 @@ export default function AuthScreen({ onLoginSuccess }: AuthScreenProps) {
 
       {/* Footer Notice */}
       <footer className="border-t border-[#2e3438] bg-[#171a1c] py-4 text-center text-xs text-zinc-500 font-mono">
-        FunBet Cameroun © 2026 • Agrément MINAT n° 000975 • Jouer avec modération
+        FunBet org © 2026 •  • Jouer avec modération
       </footer>
 
     </div>

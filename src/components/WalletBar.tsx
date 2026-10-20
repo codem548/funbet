@@ -629,7 +629,7 @@ export default function WalletBar({
                   ) : paymentConfigs.length === 0 ? (
                     <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs text-amber-400 text-center font-mono">
                       <AlertTriangle className="w-5 h-5 mx-auto mb-1 text-amber-400" />
-                      Aucun moyen de paiement actif configuré par l'administrateur. Veuillez contacter le support ou revoir la console d'administration.
+                      Aucun moyen de paiement disponible. Veuillez contacter le support ou revoir la console d'administration.
                     </div>
                   ) : (
                     <form onSubmit={handleDepositSubmit} className="space-y-4">
