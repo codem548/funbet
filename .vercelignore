@@ -1,0 +1,55 @@
+# =============================================================================
+# FunBet Casino - Vercel Ignore
+# Fichiers et dossiers ignorés lors du déploiement Vercel
+# =============================================================================
+
+# --- Dependencies (Vercel installe automatiquement) ---
+node_modules/
+
+# --- Local build artifacts (reconstruits par Vercel) ---
+dist/
+build/
+.vercel_build_output/
+
+# --- Tests & Coverage ---
+coverage/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+tests/
+test/
+__tests__/
+
+# --- Local state & data ---
+data/
+.env
+.env.local
+
+# --- Documentation ---
+docs/
+*.md
+!README.md
+!VERCEL.md
+
+# --- Backend Python (non déployé sur Vercel) ---
+backend/
+
+# --- Editor / OS files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Cache & temporaire ---
+.cache/
+.eslintcache
+.vitest/
+.nyc_output/
+*.tsbuildinfo
+
+# --- Assets non utilisés par le build ---
+assets/.aistudio/

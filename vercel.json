@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "api/vercel.ts",
+      "use": "nodejs22.x",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/vercel.ts",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/vercel.ts"
+    }
+  ],
+  "functions": {
+    "api/vercel.ts": {
+      "maxDuration": 30
+    }
+  },
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  }
+}

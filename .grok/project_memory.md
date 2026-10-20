@@ -1,0 +1,7 @@
+- FunBet Casino project restored to ORIGINAL submitted zip at /home/workdir/artifacts/funbet-casino [2026-10-17]
+- GitHub repo https://github.com/codem548/funbet-casino — generated docs removed, core original files restored [2026-10-17]
+- User request: do not rewrite frontend/structure/models, keep exact original rendering from funbet.zip [2026-10-17]
+- Système affiliation/partenaires implémenté : types Player (isPartner, partnerCode, partnerBalance, totalReferralEarnings, commissionRate), API /api/partner/stats + withdraw, admin partners CRUD, commission sur pertes REAL, PartnerDashboard, onglet Admin Partenaires [2026-10-19]
+- Supabase project funbet-casino ref mipumgyjntjnjmpzuqio (eu-west-1) — tables app_store, players, transactions [2026-10-20]
+- Persistance backend: server/db/store.ts + DATABASE_URL (role funbet_app) ; Railway env DATABASE_URL + SUPABASE_URL set on funbet-web [2026-10-20]
+- seed app_store keys: players, games, rules, logs, payment_configurations, transactions, countries, red_flags, risk_settings [2026-10-20]

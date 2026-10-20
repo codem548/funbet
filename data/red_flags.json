@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rf-1",
+    "userId": "player-id",
+    "username": "player",
+    "reason": "Anomalie de vitesse: 4 actions en moins de 1.1s (Cadence bot suspecte)",
+    "fraudScore": 94,
+    "severity": "critical",
+    "status": "FLAGGED",
+    "actionType": "CLICK_SPEED",
+    "details": "Burst d'appels /api/play/mines/reveal en 110ms par clic",
+    "timestamp": "2026-10-14T20:52:58.726Z",
+    "isResolved": false,
+    "totalProfit": 125000,
+    "winRate": 92
+  },
+  {
+    "id": "rf-2",
+    "userId": "usr-bot-4819",
+    "username": "BotHunter_99",
+    "reason": "Script automatisé régulier sur Démineur (100% de succès sur 5 parties)",
+    "fraudScore": 82,
+    "severity": "high",
+    "status": "SUSPICIOUS",
+    "actionType": "MINES_SCRIPT",
+    "details": "Pattern invariant [0, 1, 2, 3] répété",
+    "timestamp": "2026-10-14T20:22:58.728Z",
+    "isResolved": false,
+    "totalProfit": 85000,
+    "winRate": 100
+  },
+  {
+    "id": "rf-3",
+    "userId": "usr-multi-1029",
+    "username": "MultiAcc_Scout",
+    "reason": "Même empreinte IP et User-Agent détectée sur 3 comptes simultanés",
+    "fraudScore": 76,
+    "severity": "medium",
+    "status": "FLAGGED",
+    "actionType": "IP_CLONE",
+    "details": "Sessions concurrentes avec transactions croisées",
+    "timestamp": "2026-10-14T19:07:58.728Z",
+    "isResolved": false,
+    "totalProfit": 40000,
+    "winRate": 67
+  }
+]

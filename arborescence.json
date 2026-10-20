@@ -1,0 +1,786 @@
+[
+  {
+    "path": ".env",
+    "is_dir": false,
+    "size": 644,
+    "depth": 0,
+    "extension": "",
+    "name": ".env"
+  },
+  {
+    "path": ".env.example",
+    "is_dir": false,
+    "size": 2744,
+    "depth": 0,
+    "extension": ".example",
+    "name": ".env.example"
+  },
+  {
+    "path": ".github",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": ".github"
+  },
+  {
+    "path": ".github/workflows",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "workflows"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "is_dir": false,
+    "size": 639,
+    "depth": 2,
+    "extension": ".yml",
+    "name": "ci.yml"
+  },
+  {
+    "path": ".gitignore",
+    "is_dir": false,
+    "size": 1653,
+    "depth": 0,
+    "extension": "",
+    "name": ".gitignore"
+  },
+  {
+    "path": ".vercelignore",
+    "is_dir": false,
+    "size": 977,
+    "depth": 0,
+    "extension": "",
+    "name": ".vercelignore"
+  },
+  {
+    "path": "DECISIONS.md",
+    "is_dir": false,
+    "size": 4620,
+    "depth": 0,
+    "extension": ".md",
+    "name": "DECISIONS.md"
+  },
+  {
+    "path": "PROGRESS.md",
+    "is_dir": false,
+    "size": 2203,
+    "depth": 0,
+    "extension": ".md",
+    "name": "PROGRESS.md"
+  },
+  {
+    "path": "README.md",
+    "is_dir": false,
+    "size": 542,
+    "depth": 0,
+    "extension": ".md",
+    "name": "README.md"
+  },
+  {
+    "path": "VERCEL.md",
+    "is_dir": false,
+    "size": 6913,
+    "depth": 0,
+    "extension": ".md",
+    "name": "VERCEL.md"
+  },
+  {
+    "path": "api",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "api"
+  },
+  {
+    "path": "api/vercel.ts",
+    "is_dir": false,
+    "size": 894,
+    "depth": 1,
+    "extension": ".ts",
+    "name": "vercel.ts"
+  },
+  {
+    "path": "assets",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "assets"
+  },
+  {
+    "path": "assets/.aistudio",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": ".aistudio"
+  },
+  {
+    "path": "assets/.aistudio/.gitignore",
+    "is_dir": false,
+    "size": 2,
+    "depth": 2,
+    "extension": "",
+    "name": ".gitignore"
+  },
+  {
+    "path": "backend",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "backend"
+  },
+  {
+    "path": "backend/.env.example",
+    "is_dir": false,
+    "size": 206,
+    "depth": 1,
+    "extension": ".example",
+    "name": ".env.example"
+  },
+  {
+    "path": "backend/manage.py",
+    "is_dir": false,
+    "size": 458,
+    "depth": 1,
+    "extension": ".py",
+    "name": "manage.py"
+  },
+  {
+    "path": "backend/requirements.txt",
+    "is_dir": false,
+    "size": 149,
+    "depth": 1,
+    "extension": ".txt",
+    "name": "requirements.txt"
+  },
+  {
+    "path": "backend/shop",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "shop"
+  },
+  {
+    "path": "backend/xpress_shop",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "xpress_shop"
+  },
+  {
+    "path": "backend/xpress_shop/settings.py",
+    "is_dir": false,
+    "size": 3443,
+    "depth": 2,
+    "extension": ".py",
+    "name": "settings.py"
+  },
+  {
+    "path": "bun.lock",
+    "is_dir": false,
+    "size": 78728,
+    "depth": 0,
+    "extension": ".lock",
+    "name": "bun.lock"
+  },
+  {
+    "path": "data",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "data"
+  },
+  {
+    "path": "data/.gitkeep",
+    "is_dir": false,
+    "size": 222,
+    "depth": 1,
+    "extension": "",
+    "name": ".gitkeep"
+  },
+  {
+    "path": "data/countries.json",
+    "is_dir": false,
+    "size": 462,
+    "depth": 1,
+    "extension": ".json",
+    "name": "countries.json"
+  },
+  {
+    "path": "data/games.json",
+    "is_dir": false,
+    "size": 624,
+    "depth": 1,
+    "extension": ".json",
+    "name": "games.json"
+  },
+  {
+    "path": "data/logs.json",
+    "is_dir": false,
+    "size": 2,
+    "depth": 1,
+    "extension": ".json",
+    "name": "logs.json"
+  },
+  {
+    "path": "data/payment_configurations.json",
+    "is_dir": false,
+    "size": 618,
+    "depth": 1,
+    "extension": ".json",
+    "name": "payment_configurations.json"
+  },
+  {
+    "path": "data/players.json",
+    "is_dir": false,
+    "size": 731,
+    "depth": 1,
+    "extension": ".json",
+    "name": "players.json"
+  },
+  {
+    "path": "data/red_flags.json",
+    "is_dir": false,
+    "size": 1395,
+    "depth": 1,
+    "extension": ".json",
+    "name": "red_flags.json"
+  },
+  {
+    "path": "data/risk_settings.json",
+    "is_dir": false,
+    "size": 208,
+    "depth": 1,
+    "extension": ".json",
+    "name": "risk_settings.json"
+  },
+  {
+    "path": "data/rules.json",
+    "is_dir": false,
+    "size": 1421,
+    "depth": 1,
+    "extension": ".json",
+    "name": "rules.json"
+  },
+  {
+    "path": "data/transactions.json",
+    "is_dir": false,
+    "size": 2,
+    "depth": 1,
+    "extension": ".json",
+    "name": "transactions.json"
+  },
+  {
+    "path": "index.html",
+    "is_dir": false,
+    "size": 309,
+    "depth": 0,
+    "extension": ".html",
+    "name": "index.html"
+  },
+  {
+    "path": "metadata.json",
+    "is_dir": false,
+    "size": 343,
+    "depth": 0,
+    "extension": ".json",
+    "name": "metadata.json"
+  },
+  {
+    "path": "package-lock.json",
+    "is_dir": false,
+    "size": 264721,
+    "depth": 0,
+    "extension": ".json",
+    "name": "package-lock.json"
+  },
+  {
+    "path": "package.json",
+    "is_dir": false,
+    "size": 1885,
+    "depth": 0,
+    "extension": ".json",
+    "name": "package.json"
+  },
+  {
+    "path": "server",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "server"
+  },
+  {
+    "path": "server/config",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "config"
+  },
+  {
+    "path": "server/config/constants.ts",
+    "is_dir": false,
+    "size": 2548,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "constants.ts"
+  },
+  {
+    "path": "server/config/env.ts",
+    "is_dir": false,
+    "size": 1579,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "env.ts"
+  },
+  {
+    "path": "server/db",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "db"
+  },
+  {
+    "path": "server/db/client.ts",
+    "is_dir": false,
+    "size": 2109,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "client.ts"
+  },
+  {
+    "path": "server/db/migrate-data.ts",
+    "is_dir": false,
+    "size": 5145,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "migrate-data.ts"
+  },
+  {
+    "path": "server/db/migrate.ts",
+    "is_dir": false,
+    "size": 3740,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "migrate.ts"
+  },
+  {
+    "path": "server/db/schema-games.ts",
+    "is_dir": false,
+    "size": 4334,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "schema-games.ts"
+  },
+  {
+    "path": "server/db/schema.ts",
+    "is_dir": false,
+    "size": 4069,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "schema.ts"
+  },
+  {
+    "path": "server/db/seed.ts",
+    "is_dir": false,
+    "size": 2603,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "seed.ts"
+  },
+  {
+    "path": "server/middleware",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "middleware"
+  },
+  {
+    "path": "server/middleware/auth.ts",
+    "is_dir": false,
+    "size": 2329,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "auth.ts"
+  },
+  {
+    "path": "server/middleware/errorHandler.ts",
+    "is_dir": false,
+    "size": 2173,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "errorHandler.ts"
+  },
+  {
+    "path": "server/middleware/index.ts",
+    "is_dir": false,
+    "size": 599,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "index.ts"
+  },
+  {
+    "path": "server/middleware/rateLimiter.ts",
+    "is_dir": false,
+    "size": 2819,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "rateLimiter.ts"
+  },
+  {
+    "path": "server/middleware/security.ts",
+    "is_dir": false,
+    "size": 2080,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "security.ts"
+  },
+  {
+    "path": "server/middleware/validate.ts",
+    "is_dir": false,
+    "size": 1816,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "validate.ts"
+  },
+  {
+    "path": "server/modules",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "modules"
+  },
+  {
+    "path": "server/modules/auth",
+    "is_dir": true,
+    "size": null,
+    "depth": 2,
+    "extension": null,
+    "name": "auth"
+  },
+  {
+    "path": "server/modules/auth/auth.repository.ts",
+    "is_dir": false,
+    "size": 2233,
+    "depth": 3,
+    "extension": ".ts",
+    "name": "auth.repository.ts"
+  },
+  {
+    "path": "server/modules/auth/auth.routes.ts",
+    "is_dir": false,
+    "size": 3785,
+    "depth": 3,
+    "extension": ".ts",
+    "name": "auth.routes.ts"
+  },
+  {
+    "path": "server/modules/auth/auth.schema.ts",
+    "is_dir": false,
+    "size": 1329,
+    "depth": 3,
+    "extension": ".ts",
+    "name": "auth.schema.ts"
+  },
+  {
+    "path": "server/utils",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "utils"
+  },
+  {
+    "path": "server/utils/crypto.ts",
+    "is_dir": false,
+    "size": 3164,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "crypto.ts"
+  },
+  {
+    "path": "server/utils/logger.ts",
+    "is_dir": false,
+    "size": 625,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "logger.ts"
+  },
+  {
+    "path": "server/utils/money.ts",
+    "is_dir": false,
+    "size": 2813,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "money.ts"
+  },
+  {
+    "path": "server.ts",
+    "is_dir": false,
+    "size": 89113,
+    "depth": 0,
+    "extension": ".ts",
+    "name": "server.ts"
+  },
+  {
+    "path": "src",
+    "is_dir": true,
+    "size": null,
+    "depth": 0,
+    "extension": null,
+    "name": "src"
+  },
+  {
+    "path": "src/App.tsx",
+    "is_dir": false,
+    "size": 17281,
+    "depth": 1,
+    "extension": ".tsx",
+    "name": "App.tsx"
+  },
+  {
+    "path": "src/components",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "components"
+  },
+  {
+    "path": "src/components/AdminPanel.tsx",
+    "is_dir": false,
+    "size": 125644,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "AdminPanel.tsx"
+  },
+  {
+    "path": "src/components/AuthScreen.tsx",
+    "is_dir": false,
+    "size": 20380,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "AuthScreen.tsx"
+  },
+  {
+    "path": "src/components/BottomNavigationBar.tsx",
+    "is_dir": false,
+    "size": 3069,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "BottomNavigationBar.tsx"
+  },
+  {
+    "path": "src/components/CasinoLobby.tsx",
+    "is_dir": false,
+    "size": 23771,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "CasinoLobby.tsx"
+  },
+  {
+    "path": "src/components/CrashGame.tsx",
+    "is_dir": false,
+    "size": 43144,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "CrashGame.tsx"
+  },
+  {
+    "path": "src/components/DepositWithdrawModal.tsx",
+    "is_dir": false,
+    "size": 32581,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "DepositWithdrawModal.tsx"
+  },
+  {
+    "path": "src/components/Footer.tsx",
+    "is_dir": false,
+    "size": 11433,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "Footer.tsx"
+  },
+  {
+    "path": "src/components/HeaderNavbar.tsx",
+    "is_dir": false,
+    "size": 16106,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "HeaderNavbar.tsx"
+  },
+  {
+    "path": "src/components/LeftSidebarDrawer.tsx",
+    "is_dir": false,
+    "size": 11583,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "LeftSidebarDrawer.tsx"
+  },
+  {
+    "path": "src/components/LiveBetsBar.tsx",
+    "is_dir": false,
+    "size": 4823,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "LiveBetsBar.tsx"
+  },
+  {
+    "path": "src/components/MinesGame.tsx",
+    "is_dir": false,
+    "size": 21738,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "MinesGame.tsx"
+  },
+  {
+    "path": "src/components/ProvablyFairModal.tsx",
+    "is_dir": false,
+    "size": 13512,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "ProvablyFairModal.tsx"
+  },
+  {
+    "path": "src/components/RewardsCenterModal.tsx",
+    "is_dir": false,
+    "size": 16322,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "RewardsCenterModal.tsx"
+  },
+  {
+    "path": "src/components/SearchModal.tsx",
+    "is_dir": false,
+    "size": 10198,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "SearchModal.tsx"
+  },
+  {
+    "path": "src/components/SweetBonanzaGame.tsx",
+    "is_dir": false,
+    "size": 35967,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "SweetBonanzaGame.tsx"
+  },
+  {
+    "path": "src/components/WalletBar.tsx",
+    "is_dir": false,
+    "size": 47657,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "WalletBar.tsx"
+  },
+  {
+    "path": "src/components/WheelGame.tsx",
+    "is_dir": false,
+    "size": 30902,
+    "depth": 2,
+    "extension": ".tsx",
+    "name": "WheelGame.tsx"
+  },
+  {
+    "path": "src/index.css",
+    "is_dir": false,
+    "size": 1903,
+    "depth": 1,
+    "extension": ".css",
+    "name": "index.css"
+  },
+  {
+    "path": "src/main.tsx",
+    "is_dir": false,
+    "size": 231,
+    "depth": 1,
+    "extension": ".tsx",
+    "name": "main.tsx"
+  },
+  {
+    "path": "src/services",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "services"
+  },
+  {
+    "path": "src/types.ts",
+    "is_dir": false,
+    "size": 5800,
+    "depth": 1,
+    "extension": ".ts",
+    "name": "types.ts"
+  },
+  {
+    "path": "src/utils",
+    "is_dir": true,
+    "size": null,
+    "depth": 1,
+    "extension": null,
+    "name": "utils"
+  },
+  {
+    "path": "src/utils/audioHaptics.ts",
+    "is_dir": false,
+    "size": 9991,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "audioHaptics.ts"
+  },
+  {
+    "path": "src/utils/provablyFair.ts",
+    "is_dir": false,
+    "size": 2591,
+    "depth": 2,
+    "extension": ".ts",
+    "name": "provablyFair.ts"
+  },
+  {
+    "path": "tsconfig.json",
+    "is_dir": false,
+    "size": 508,
+    "depth": 0,
+    "extension": ".json",
+    "name": "tsconfig.json"
+  },
+  {
+    "path": "vercel.json",
+    "is_dir": false,
+    "size": 561,
+    "depth": 0,
+    "extension": ".json",
+    "name": "vercel.json"
+  },
+  {
+    "path": "vite.config.ts",
+    "is_dir": false,
+    "size": 708,
+    "depth": 0,
+    "extension": ".ts",
+    "name": "vite.config.ts"
+  },
+  {
+    "path": "vitest.config.ts",
+    "is_dir": false,
+    "size": 648,
+    "depth": 0,
+    "extension": ".ts",
+    "name": "vitest.config.ts"
+  }
+]

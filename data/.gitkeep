@@ -1,0 +1,3 @@
+# Ce fichier garde le répertoire data/ dans le dépôt Git.
+# En local, les fichiers JSON générés sont ignorés par .gitignore.
+# Sur Vercel, le serveur utilise des valeurs par défaut si les fichiers n'existent pas.

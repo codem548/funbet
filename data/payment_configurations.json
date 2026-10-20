@@ -1,0 +1,25 @@
+[
+  {
+    "id": "pay-mtn",
+    "moyen_paiement": "MTN",
+    "nom_destination": "FunBet Live Sarl",
+    "numero_destination": "+237 670 123 456",
+    "syntaxe_ussd": "*126*1*1*670123456*MONTANT#",
+    "isActive": true
+  },
+  {
+    "id": "pay-orange",
+    "moyen_paiement": "ORANGE",
+    "nom_destination": "FunBet Live Sarl",
+    "numero_destination": "+237 690 987 654",
+    "syntaxe_ussd": "*150*1*1*690987654*MONTANT#",
+    "isActive": true
+  },
+  {
+    "id": "pay-wave",
+    "moyen_paiement": "WAVE",
+    "nom_destination": "FunBet Live Sn",
+    "numero_destination": "+221 77 123 45 67",
+    "isActive": true
+  }
+]

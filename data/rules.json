@@ -1,0 +1,73 @@
+[
+  {
+    "id": "rule-new-player",
+    "gameId": "all",
+    "description": "3 premiers jeux = win facile (Nouveau Joueur)",
+    "conditionJson": {
+      "is_new_player": true
+    },
+    "actionJson": {
+      "force_result": "WIN",
+      "multiplier_range": [
+        1.5,
+        2.5
+      ]
+    },
+    "priority": 10,
+    "isActive": true
+  },
+  {
+    "id": "rule-low-balance",
+    "gameId": "all",
+    "description": "Aide Solde Bas (< 1000 crédits = win de secours)",
+    "conditionJson": {
+      "balance_max": 1000
+    },
+    "actionJson": {
+      "force_result": "WIN",
+      "multiplier_range": [
+        1.2,
+        1.8
+      ]
+    },
+    "priority": 20,
+    "isActive": true
+  },
+  {
+    "id": "rule-loss-streak",
+    "gameId": "all",
+    "description": "Anti-Frustration (Après 5 pertes de suite = win forcé)",
+    "conditionJson": {
+      "consecutive_loss_min": 5
+    },
+    "actionJson": {
+      "force_result": "WIN",
+      "multiplier_range": [
+        2,
+        3.5
+      ]
+    },
+    "priority": 30,
+    "isActive": true
+  },
+  {
+    "id": "rule-happy-hour",
+    "gameId": "all",
+    "description": "Happy Hour (20h - 22h = multiplicateurs boostés)",
+    "conditionJson": {
+      "hour_between": [
+        20,
+        22
+      ]
+    },
+    "actionJson": {
+      "force_result": "WIN",
+      "multiplier_range": [
+        2.5,
+        5
+      ]
+    },
+    "priority": 15,
+    "isActive": false
+  }
+]

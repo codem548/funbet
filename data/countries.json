@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cm",
+    "name": "Cameroun",
+    "code": "+237",
+    "flag": "🇨🇲",
+    "isActive": true
+  },
+  {
+    "id": "sn",
+    "name": "Sénégal",
+    "code": "+221",
+    "flag": "🇸🇳",
+    "isActive": true
+  },
+  {
+    "id": "ci",
+    "name": "Côte d'Ivoire",
+    "code": "+225",
+    "flag": "🇨🇮",
+    "isActive": true
+  },
+  {
+    "id": "fr",
+    "name": "France",
+    "code": "+33",
+    "flag": "🇫🇷",
+    "isActive": true
+  }
+]

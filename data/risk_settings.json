@@ -1,0 +1,10 @@
+{
+  "maxWinCap": 5000000,
+  "maxBetLimit": 100000,
+  "targetRtp": 96.5,
+  "houseEdge": 3.5,
+  "maxTreasuryRisk": 5,
+  "dynamicRtpActive": true,
+  "autoWithdrawLimit": 20000,
+  "isAutoWithdrawEnabled": false
+}

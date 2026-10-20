@@ -1,0 +1,6 @@
+{
+  "name": "FunBet",
+  "description": "Plateforme de jeux de casino et mini-jeux d'arcade en ligne avec gestion de solde réel (FCFA) et démo (FTB), Mines Pro, Rocket Crash, Roue de la Fortune, Sweet Bonanza et console d'administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
