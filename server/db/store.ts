@@ -24,12 +24,23 @@ let pool: pg.Pool | null = null;
 let ready = false;
 
 function getDatabaseUrl(): string | null {
-  const url =
+  let url =
     process.env.DATABASE_URL ||
     process.env.SUPABASE_DB_URL ||
     process.env.POSTGRES_URL ||
     null;
-  return url && url.trim() ? url.trim() : null;
+  if (!url || !url.trim()) return null;
+  url = url.trim();
+  // Strip sslmode from URL — pg v8 treats "require" as verify-full and fails on Supabase chain
+  try {
+    const u = new URL(url);
+    u.searchParams.delete('sslmode');
+    u.searchParams.delete('ssl');
+    url = u.toString();
+  } catch {
+    /* keep raw */
+  }
+  return url;
 }
 
 export function isDbConfigured(): boolean {
@@ -42,15 +53,14 @@ export function getPool(): pg.Pool {
   if (!url) {
     throw new Error('DATABASE_URL is not set');
   }
+  const isLocal = url.includes('localhost') || url.includes('127.0.0.1');
   pool = new Pool({
     connectionString: url,
-    ssl: url.includes('localhost') || url.includes('127.0.0.1')
-      ? false
-      : { rejectUnauthorized: false },
+    // Always disable cert verification for managed Postgres (Supabase pooler)
+    ssl: isLocal ? false : { rejectUnauthorized: false },
     max: 5,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 15_000,
-    // Prefer IPv4 — Railway cannot always reach Supabase IPv6
     family: 4,
   } as any);
   pool.on('error', (err) => {
