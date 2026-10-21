@@ -86,7 +86,6 @@ function savePlayers() {
     );
   }
 
-  // Supabase-first writeData (no reliance on ephemeral JSON files in production)
   src = src.replace(
     /function writeData<T>\(filePath: string, data: T\): void \{[\s\S]*?\n\}/,
     `function writeData<T>(filePath: string, data: T): void {
@@ -106,48 +105,28 @@ function savePlayers() {
 }`
   );
 
-  // Full in-place hydrate (keep array references stable)
-  if (!src.includes("players.splice(0, players.length")) {
-    src = src.replace(
-      `    if (ok) {
-      players = await hydrateStore('players', players);
-      games = await hydrateStore('games', games);
-      rules = await hydrateStore('rules', rules);
-      logs = await hydrateStore('logs', logs);
-      paymentConfigurations = await hydrateStore('payment_configurations', paymentConfigurations);
-      transactions = await hydrateStore('transactions', transactions);
-      countries = await hydrateStore('countries', countries);
-      redFlags = await hydrateStore('red_flags', redFlags);
-      riskSettings = await hydrateStore('risk_settings', riskSettings);
-      console.log(\"[db] Hydrated: \" + players.length + \" players, \" + transactions.length + \" txs\");
-    }`,
-      `    if (ok) {
-      const hPlayers = await hydrateStore('players', players);
-      players.splice(0, players.length, ...hPlayers);
-      const hGames = await hydrateStore('games', games);
-      games.splice(0, games.length, ...hGames);
-      const hRules = await hydrateStore('rules', rules);
-      rules.splice(0, rules.length, ...hRules);
-      const hLogs = await hydrateStore('logs', logs);
-      logs.splice(0, logs.length, ...hLogs);
-      const hPay = await hydrateStore('payment_configurations', paymentConfigurations);
-      paymentConfigurations.splice(0, paymentConfigurations.length, ...hPay);
-      const hTx = await hydrateStore('transactions', transactions);
-      transactions.splice(0, transactions.length, ...hTx);
-      const hCountries = await hydrateStore('countries', countries);
-      countries.splice(0, countries.length, ...hCountries);
-      const hFlags = await hydrateStore('red_flags', redFlags);
-      redFlags.splice(0, redFlags.length, ...hFlags);
-      riskSettings = await hydrateStore('risk_settings', riskSettings);
-      console.log('[db] Hydrated: ' + players.length + ' players, ' + transactions.length + ' txs (Supabase)');
-    }`
-    );
-  }
-  // Fallback simpler splice if template literal match failed
   if (!src.includes('players.splice(0, players.length')) {
     src = src.replace(
       "players = await hydrateStore('players', players);",
       "const hPlayers = await hydrateStore('players', players);\n      players.splice(0, players.length, ...hPlayers);"
+    );
+  }
+
+  // Player transaction history (DepositWithdrawModal)
+  if (!src.includes("/api/wallet/transactions")) {
+    src = src.replace(
+      "app.post('/api/wallet/deposit'",
+      `app.get('/api/wallet/transactions', (req, res) => {
+  const userId = String(req.query.userId || '').trim();
+  if (!userId) {
+    return res.status(400).json({ error: 'userId requis' });
+  }
+  const list = (transactions || []).filter((t: any) => t.userId === userId);
+  list.sort((a: any, b: any) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime());
+  res.json({ transactions: list });
+});
+
+app.post('/api/wallet/deposit'`
     );
   }
 
