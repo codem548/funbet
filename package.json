@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "prebuild": "node scripts/restore-server.cjs && node scripts/patch-admin-override-solde.cjs",
+    "prebuild": "node scripts/restore-server.cjs && node scripts/patch-admin-override-solde.cjs && node scripts/patch-tx-history.cjs",
     "build": "npm run prebuild && vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "vercel-build": "npm run build",
     "start": "node dist/server.cjs",
