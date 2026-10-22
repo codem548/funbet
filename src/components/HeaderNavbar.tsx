@@ -71,7 +71,7 @@ export default function HeaderNavbar({
             <Menu className="w-5 h-5" />
           </button>
 
-          {/* betPawa / FunBet Style Logo */}
+          {/* / FunBet Style Logo */}
           <button
             onClick={() => onSelectNavTab('casino')}
             className="flex items-center gap-1.5 cursor-pointer group text-left"
@@ -274,7 +274,7 @@ export default function HeaderNavbar({
 
       </div>
 
-      {/* Sub-Navbar Navigation Tabs (betPawa subNavbar style) */}
+      {/* Sub-Navbar Navigation Tabs ( subNavbar style) */}
       <div className="w-full bg-[#222629] border-t border-[#2e3438] px-2 sm:px-4">
         <nav className="max-w-7xl mx-auto flex items-center overflow-x-auto no-scrollbar gap-1 sm:gap-2 py-1.5">
           

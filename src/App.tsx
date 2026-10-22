@@ -249,7 +249,7 @@ export default function App() {
           </span>
         </div>
         <div className="w-8 h-8 border-3 border-[#9ce800]/20 border-t-[#9ce800] rounded-full animate-spin mb-3" />
-        <p className="text-xs font-mono text-zinc-400">Chargement du lobby betPawa & Casino...</p>
+        <p className="text-xs font-mono text-zinc-400">Chargement du Casino...</p>
       </div>
     );
   }
@@ -478,7 +478,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Authentic betPawa / Sportsbook Footer */}
+      {/* Authentic / Sportsbook Footer */}
       <Footer />
 
       {/* PWA install banner — non-blocking */}

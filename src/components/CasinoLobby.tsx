@@ -44,7 +44,7 @@ export default function CasinoLobby({
   return (
     <div className="space-y-6 select-none animate-in fade-in duration-200">
       
-      {/* 1. Category Pills Carousel (betPawa CasinoPills style) */}
+      {/* 1. Category Pills Carousel (CasinoPills style) */}
       <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
         {categories.map((cat) => {
           const isActive = selectedPill === cat.id;

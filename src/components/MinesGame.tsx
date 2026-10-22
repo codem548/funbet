@@ -449,10 +449,10 @@ export default function MinesGame({ player, gameConfig, playMode, onUpdatePlayer
 
           </div>
 
-          <div className="flex items-center justify-between w-full max-w-[320px] sm:max-w-[420px] px-2 text-[10px] text-zinc-400 font-mono">
+          {/* <div className="flex items-center justify-between w-full max-w-[320px] sm:max-w-[420px] px-2 text-[10px] text-zinc-400 font-mono">
             <span>{gameStatus === 'playing' ? "💎 Chaque diamant augmente la cote" : "🔒 Tirage mathématique sécurisé"}</span>
             <span className="text-emerald-400">100% PROVABLY FAIR</span>
-          </div>
+          </div> */}
 
         </div>
 

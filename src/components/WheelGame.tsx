@@ -652,10 +652,10 @@ export default function WheelGame({ player, gameConfig, playMode, onUpdatePlayer
 
           </div>
 
-          <div className="flex items-center gap-1.5 mt-6 px-4 py-1.5 bg-zinc-950 rounded-xl border border-density-border text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+          {/* <div className="flex items-center gap-1.5 mt-6 px-4 py-1.5 bg-zinc-950 rounded-xl border border-density-border text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
             <span>Algorithme certifié Provably Fair</span>
-          </div>
+          </div> */}
 
         </div>
 

@@ -155,7 +155,7 @@ export default function LeftSidebarDrawer({
                 <span>💣</span>
                 <span>Démineur Pro (5x5)</span>
               </div>
-              <span className="text-[9px] font-mono text-[#9ce800]">97% RTP</span>
+              {/* <span className="text-[9px] font-mono text-[#9ce800]">97% RTP</span> */}
             </button>
 
             <button
@@ -166,7 +166,7 @@ export default function LeftSidebarDrawer({
                 <span>🚀</span>
                 <span>Rocket Crash Multiplier</span>
               </div>
-              <span className="text-[9px] font-mono text-[#9ce800]">97% RTP</span>
+              {/* <span className="text-[9px] font-mono text-[#9ce800]">97% RTP</span> */}
             </button>
 
             <button
@@ -177,7 +177,7 @@ export default function LeftSidebarDrawer({
                 <span>📀</span>
                 <span>Roue de la Fortune (60 Seg)</span>
               </div>
-              <span className="text-[9px] font-mono text-[#9ce800]">96% RTP</span>
+              {/* <span className="text-[9px] font-mono text-[#9ce800]">96% RTP</span> */}
             </button>
 
             <button
@@ -188,7 +188,7 @@ export default function LeftSidebarDrawer({
                 <span>🍬</span>
                 <span>Sweet Bonanza Cascade</span>
               </div>
-              <span className="text-[9px] font-mono text-[#9ce800]">96.5% RTP</span>
+              {/* <span className="text-[9px] font-mono text-[#9ce800]">96.5% RTP</span> */}
             </button>
           </div>
 

@@ -482,7 +482,7 @@ export default function SweetBonanzaGame({ player, gameConfig, playMode, onUpdat
           </div>
 
           {/* Real-time statistics/info list */}
-          <div className="bg-[#09090b]/40 border border-density-border/40 rounded-2xl p-4 space-y-3">
+          {/* <div className="bg-[#09090b]/40 border border-density-border/40 rounded-2xl p-4 space-y-3">
             <span className="text-[10px] font-mono font-bold text-zinc-500 uppercase tracking-wider block">Spécifications de Gains</span>
             <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-400">
               <div className="p-2 bg-[#09090b]/40 rounded-lg border border-zinc-950">
@@ -502,7 +502,7 @@ export default function SweetBonanzaGame({ player, gameConfig, playMode, onUpdat
                 <span className="text-purple-400 font-bold">Garanti 10 FS</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
 
