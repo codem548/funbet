@@ -227,7 +227,7 @@ export default function AuthScreen({ onLoginSuccess }: AuthScreenProps) {
               {isRegister ? 'Créer un Compte Joueur' : 'Connexion à FunBet'}
             </h1>
             <p className="text-xs text-zinc-400">
-              Jouez en <strong>Mode Démo</strong> (FTB gratuit) ou en <strong>Mode Réel</strong> (FCFA)
+              Jouez en <strong>Mode Démo</strong> (FTB gratuit) ou en <strong>Mode Réel</strong> (CFA)
             </p>
           </div>
 
@@ -261,7 +261,8 @@ export default function AuthScreen({ onLoginSuccess }: AuthScreenProps) {
             <form onSubmit={handleSubmit} className="space-y-4">
               {error && (
                 <div className="p-3 bg-red-950/40 border border-red-500/40 rounded-xl text-xs text-red-300 text-center font-medium">
-                  {error}
+                  {/* {error} */}
+                  {"réseau instable"}
                 </div>
               )}
 
